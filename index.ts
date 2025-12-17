@@ -2,9 +2,9 @@ import { ルール } from './dsl.js'
 
 const 通知 = (message: string) => console.log(`[通知] ${message}`)
 
-const 残業時間: number = 52
+const 残業時間: number = 62
 const 有給残日数: number = 0
-const 雇用形態 = '正社員'
+const 雇用形態: string = '正社員'
 
 ルール()
   .もし(残業時間)
