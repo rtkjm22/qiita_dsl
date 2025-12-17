@@ -1,8 +1,6 @@
 import { ルール } from './dsl.js'
 
-const 通知 = (message: string) => {
-  console.log(`[通知] ${message}`)
-}
+const 通知 = (message: string) => console.log(`[通知] ${message}`)
 
 const 残業時間: number = 52
 const 有給残日数: number = 0

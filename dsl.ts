@@ -29,9 +29,8 @@ const createCases = () => {
   const cases: Case[] = []
 
   return {
-    add: (condition: () => boolean, action: Action) => {
-      cases.push({ condition, action })
-    },
+    add: (condition: () => boolean, action: Action) =>
+      cases.push({ condition, action }),
     run: () => {
       for (const r of cases) {
         if (r.condition()) r.action()
@@ -83,9 +82,7 @@ export const ルール = (): Rule => {
     /**
      * 「もし・が・なら」で蓄積されたCase型のオブジェクトを順々に実行します
      */
-    適用する: () => {
-      cases.run()
-    }
+    適用する: () => cases.run()
   }
 
   return rule
